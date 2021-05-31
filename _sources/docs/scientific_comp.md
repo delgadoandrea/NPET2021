@@ -13,7 +13,6 @@ kernelspec:
 ---
 
 (launch/thebe)=
-
 # Getting Started
 
 This module is designed to introduce you to the basic commands and tools needed to run your first scientific computing application. We will start with basic commands to execute in a Unix Shell, followed by a short tutorial on Python. But before we start, let's get you all set-up.

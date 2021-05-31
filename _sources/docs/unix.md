@@ -13,7 +13,6 @@ kernelspec:
 ---
 
 (launch/thebe)=
-
 # Introduction to the Command Line
 
 ## What is it?
