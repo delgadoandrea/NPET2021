@@ -193,13 +193,30 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-up-your-terminal">
-   Setting up your terminal
+  <a class="reference internal nav-link" href="#setting-up-and-accessing-your-terminal">
+   Setting up and accessing your terminal
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-a-terminal-on-mac">
+     Open a Terminal on Mac
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-a-terminal-on-ubuntu-linux">
+     Open a Terminal on Ubuntu Linux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#accessing-a-unix-shell-on-windows">
+     Accessing a Unix Shell on Windows
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-code">
-   Running code
+  <a class="reference internal nav-link" href="#running-code-on-your-web-browser">
+   Running code on your web browser
   </a>
  </li>
 </ul>
@@ -215,13 +232,40 @@
                 
   <div class="section" id="getting-started">
 <span id="launch-thebe"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<p>This module is designed to introduce you to the basic commands and tools needed to run your first scientific computing application. We will start with basic commands to execute in a Unix Shell, followed by a short tutorial on Python. But before we start, let’s get you all set-up.</p>
-<div class="section" id="setting-up-your-terminal">
-<h2>Setting up your terminal<a class="headerlink" href="#setting-up-your-terminal" title="Permalink to this headline">¶</a></h2>
+<p>The first thing you need to get started on running your first commands on a Unix terminal, or an emulator. A Unix terminal is a native application on Mac OS and Linux operating systems. If you only have access to a Windows operating computer, dont worry, you can still do a dual booth with Ubuntu, install a Unix terminal emulator or just run this tutorial interactively on your web browser. The particular needs for your research project will depend on your mentor so make sure to ask!</p>
+<div class="section" id="setting-up-and-accessing-your-terminal">
+<h2>Setting up and accessing your terminal<a class="headerlink" href="#setting-up-and-accessing-your-terminal" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="open-a-terminal-on-mac">
+<h3>Open a Terminal on Mac<a class="headerlink" href="#open-a-terminal-on-mac" title="Permalink to this headline">¶</a></h3>
+<p><img alt="mac" src="../_images/MasOSTerminal.png" /></p>
+<p>On your Mac, do one of the following:</p>
+<ul class="simple">
+<li><p>Click the <strong>Launchpad</strong> icon in the Dock, type Terminal in the search field, then click <strong>Termninal</strong>.</p></li>
+<li><p>In the <strong>Finder</strong>, open <em>/Applications/Utilities</em> folder, then double-click <strong>Terminal</strong>.</p></li>
+</ul>
 </div>
-<div class="section" id="running-code">
-<h2>Running code<a class="headerlink" href="#running-code" title="Permalink to this headline">¶</a></h2>
-<p>Some sections will allow you to run code and see outputs <em>without leaving the page</em>. Interactivity is provided
+<div class="section" id="open-a-terminal-on-ubuntu-linux">
+<h3>Open a Terminal on Ubuntu Linux<a class="headerlink" href="#open-a-terminal-on-ubuntu-linux" title="Permalink to this headline">¶</a></h3>
+<p><img alt="mac" src="../_images/terminal-window-on-ubuntu.png" /></p>
+<p>If you are running Ubuntu 20.04 LTS or later, you can launch a Terminal Window by:</p>
+<ul class="simple">
+<li><p>Pressing <em>CTRL+Alt+T</em>. A GNOME Terminal window will pop right up.</p></li>
+<li><p>You can also launch a terminal from the <em>Dash</em> (The Icon on your taskbar that looks like a grid of white points). Type <strong>Terminal</strong> and press <em>Enter</em> to find and launch the Terminal shortcut.</p></li>
+<li><p>You can also press <em>Alt+F2</em> to open the <em>Run a Command</em> dialog. type <em>gnome-terminal</em> here and press <em>Enter</em> to launch a terminal window.</p></li>
+</ul>
+</div>
+<div class="section" id="accessing-a-unix-shell-on-windows">
+<h3>Accessing a Unix Shell on Windows<a class="headerlink" href="#accessing-a-unix-shell-on-windows" title="Permalink to this headline">¶</a></h3>
+<p>There are two ways to access a unix shell in a Windows environment:</p>
+<ul class="simple">
+<li><p>By installing Ubuntu on your computer (or any other Linux distribution) and run on a dual-booth fashion. This way you get to keep both operating systems. Instructions for installing Ubuntu on your Windows computer can be found [<strong>here</strong>][<a class="reference external" href="https://ubuntu.com/tutorials/ubuntu-on-windows#4-install-ubuntu-for-windows-10">https://ubuntu.com/tutorials/ubuntu-on-windows#4-install-ubuntu-for-windows-10</a>].</p></li>
+<li><p>You can run an emulator such as <em>Cygwin</em> inside your Windows environment. Instructions can be found [<strong>here</strong>][<a class="reference external" href="https://www.cygwin.com">https://www.cygwin.com</a>].</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="running-code-on-your-web-browser">
+<h2>Running code on your web browser<a class="headerlink" href="#running-code-on-your-web-browser" title="Permalink to this headline">¶</a></h2>
+<p>If none of the above options worked for you, or if you want to follow along without the risk of damaaging your personal computer, dont worry, most sections will allow you to run code and see outputs on your web browser <em>without leaving the page</em>. Interactivity is provided
 by a kernel running on the public <a class="reference external" href="https://mybinder.org"><strong>MyBinder</strong></a> service.</p>
 <p>For an example, click the <span class="fa fa-rocket"></span> –&gt; <span class="guilabel">Live Code</span> button above on this page, and run the code below.</p>
 <div class="cell docutils container">
