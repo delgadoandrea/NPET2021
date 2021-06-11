@@ -63,7 +63,7 @@ A useful tip is to use the *tab* key to autocomplete the name of a given file or
 cd ../Folder2/
 ```
 
-##Editing the filesystem
+## Editing the filesystem
 
 You can create a directory by typing
 
@@ -77,6 +77,93 @@ to create a file, you can simply do
 %%bash
 touch <filename>
 ```
+
+## Viewing and changing the file system
+
+The shell command *cp* is used to copy files or directories. The basic argument structure is *cp source destination*, where the *source* is the file/directory to copy to the *destination* file/directory.
+
+```{code-cell} ipython3
+%%bash
+cp file1 file1_copy
+cp file1 file2 destination_folder
+```
+
+The shell command *mv* is used to move a file into a directory. Use *mv* with the source file as the first argument and the destination directory as the second argument.
+
+```{code-cell} ipython3
+%%bash
+mv file.txt myFolder/
+```
+
+The shell command *rm* is used to delete files and directories. The *-r* flag deletes a directory and all of its files and directories (*rm -r*).
+
+```{code-cell} ipython3
+%%bash
+rm -r bad_selfies
+```
+The shell command *ls* is used to list the contents in a directory. It can be combined with the following command options:
+- *-a*: lists all contents, including hidden files and directories.
+- *-l*: lists all contents, in long format.
+- *-t*: lists all contents, by the time they were last modified.
+
+## Command line redirection
+On a command line, *redirection* is the process of using the input/output of a file or command to use it as an input for another file. Redirection can be done by using the operators *>* and *>>*.
+
+```{code-cell} ipython3
+%%bash
+ls > directories_list.txt
+ls >> directories_list.txt
+```
+
+The *>* symbol is used to redirect output by taking the output from the command on the left and passing as input to the file on the right. 
+
+```{code-cell} ipython3
+%%bash
+echo "Hola" > hola.txt
+```
+
+The shell command *cat* displays the contents of one or more files to the terminal.
+
+```{code-cell} ipython3
+%%bash
+cat poem.txt
+```
+
+if you just want to print the first or last few lines of a file, you can use *head* or *tail*:
+
+```{code-cell} ipython3
+%%bash
+head poem.txt
+tail poem.txt
+```
+
+The *>>* shell command is used to redirect the standard output of the command line on the left and append (add) it to the end of the file on the right.
+
+```{code-cell} ipython3
+%%bash
+#This command will append "Hello World!" to greetings.txt
+echo "Hello World!" >> greetings.txt
+```
+
+The *|* command is called a *pipe*. It is used to pipe, or transfer, the standard output from the command on its left into the standard input of the command on its right.
+
+```{code-cell} ipython3
+%%bash
+# First, echo "Hello World" will send Hello World to the standard output.
+# Next, pipe | will transfer the standard output to the next command's standard input.
+# Finally, wc -w will count the number of words from its standard input, which is 2.
+echo "Hello World" | wc -w
+```
+The shell command *grep* is used to search files for lines that match a pattern and returns the results. Various options can be specified along with the *grep* command to specify the search.
+
+```{code-cell} ipython3
+%%bash
+grep 'Andrea' names.txt
+```
+- The shell *grep* command searches files for a particular pattern. Adding the *-i* option can be used to search files for lines that match a pattern, case sensitive, and returns the results.
+- The *-R* option searches all files in a directory, including its subdirectories, and outputs filenames and lines containing matched results.
+
+Finally, you can run bash code on your terminal, to execute a specific task. For example,
 
 ```{code-cell} ipython3
 %%bash

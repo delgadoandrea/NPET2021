@@ -51,6 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction to Python" href="python.html" />
     <link rel="prev" title="Getting Started" href="scientific_comp.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -95,6 +96,21 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Introduction to the Command Line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python.html">
+   Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises.html">
+   Exercises
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises_solutions.html">
+   Solutions
   </a>
  </li>
 </ul>
@@ -201,6 +217,21 @@
    Command Line Navigation
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#editing-the-filesystem">
+   Editing the filesystem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#viewing-and-changing-the-file-system">
+   Viewing and changing the file system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#command-line-redirection">
+   Command line redirection
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -272,7 +303,9 @@
 </div>
 </div>
 </div>
-<p>##Editing the filesystem</p>
+</div>
+<div class="section" id="editing-the-filesystem">
+<h2>Editing the filesystem<a class="headerlink" href="#editing-the-filesystem" title="Permalink to this headline">¶</a></h2>
 <p>You can create a directory by typing</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -291,6 +324,120 @@
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="viewing-and-changing-the-file-system">
+<h2>Viewing and changing the file system<a class="headerlink" href="#viewing-and-changing-the-file-system" title="Permalink to this headline">¶</a></h2>
+<p>The shell command <em>cp</em> is used to copy files or directories. The basic argument structure is <em>cp source destination</em>, where the <em>source</em> is the file/directory to copy to the <em>destination</em> file/directory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="n">cp</span> <span class="n">file1</span> <span class="n">file1_copy</span>
+<span class="n">cp</span> <span class="n">file1</span> <span class="n">file2</span> <span class="n">destination_folder</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The shell command <em>mv</em> is used to move a file into a directory. Use <em>mv</em> with the source file as the first argument and the destination directory as the second argument.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="n">mv</span> <span class="n">file</span><span class="o">.</span><span class="n">txt</span> <span class="n">myFolder</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The shell command <em>rm</em> is used to delete files and directories. The <em>-r</em> flag deletes a directory and all of its files and directories (<em>rm -r</em>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="n">bad_selfies</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The shell command <em>ls</em> is used to list the contents in a directory. It can be combined with the following command options:</p>
+<ul class="simple">
+<li><p><em>-a</em>: lists all contents, including hidden files and directories.</p></li>
+<li><p><em>-l</em>: lists all contents, in long format.</p></li>
+<li><p><em>-t</em>: lists all contents, by the time they were last modified.</p></li>
+</ul>
+</div>
+<div class="section" id="command-line-redirection">
+<h2>Command line redirection<a class="headerlink" href="#command-line-redirection" title="Permalink to this headline">¶</a></h2>
+<p>On a command line, <em>redirection</em> is the process of using the input/output of a file or command to use it as an input for another file. Redirection can be done by using the operators <em>&gt;</em> and <em>&gt;&gt;</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="n">ls</span> <span class="o">&gt;</span> <span class="n">directories_list</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">ls</span> <span class="o">&gt;&gt;</span> <span class="n">directories_list</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <em>&gt;</em> symbol is used to redirect output by taking the output from the command on the left and passing as input to the file on the right.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="n">echo</span> <span class="s2">&quot;Hola&quot;</span> <span class="o">&gt;</span> <span class="n">hola</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The shell command <em>cat</em> displays the contents of one or more files to the terminal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="n">cat</span> <span class="n">poem</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>if you just want to print the first or last few lines of a file, you can use <em>head</em> or <em>tail</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="n">head</span> <span class="n">poem</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">tail</span> <span class="n">poem</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <em>&gt;&gt;</em> shell command is used to redirect the standard output of the command line on the left and append (add) it to the end of the file on the right.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="c1">#This command will append &quot;Hello World!&quot; to greetings.txt</span>
+<span class="n">echo</span> <span class="s2">&quot;Hello World!&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">greetings</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <em>|</em> command is called a <em>pipe</em>. It is used to pipe, or transfer, the standard output from the command on its left into the standard input of the command on its right.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="c1"># First, echo &quot;Hello World&quot; will send Hello World to the standard output.</span>
+<span class="c1"># Next, pipe | will transfer the standard output to the next command&#39;s standard input.</span>
+<span class="c1"># Finally, wc -w will count the number of words from its standard input, which is 2.</span>
+<span class="n">echo</span> <span class="s2">&quot;Hello World&quot;</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">w</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The shell command <em>grep</em> is used to search files for lines that match a pattern and returns the results. Various options can be specified along with the <em>grep</em> command to specify the search.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="n">grep</span> <span class="s1">&#39;Andrea&#39;</span> <span class="n">names</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>The shell <em>grep</em> command searches files for a particular pattern. Adding the <em>-i</em> option can be used to search files for lines that match a pattern, case sensitive, and returns the results.</p></li>
+<li><p>The <em>-R</em> option searches all files in a directory, including its subdirectories, and outputs filenames and lines containing matched results.</p></li>
+</ul>
+<p>Finally, you can run bash code on your terminal, to execute a specific task. For example,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>%%bash
@@ -331,6 +478,7 @@ done
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="scientific_comp.html" title="previous page">Getting Started</a>
+    <a class='right-next' id="next-link" href="python.html" title="next page">Introduction to Python</a>
 
         </div>
         
