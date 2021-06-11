@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Solutions" href="exercises_solutions.html" />
@@ -264,26 +266,15 @@
 </div>
 <div class="section" id="task-3">
 <h2>Task 3<a class="headerlink" href="#task-3" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;a id=&quot;task3&quot;&gt;&lt;/a&gt;
-&lt;h3&gt; Task 3 &lt;/h3&gt;
-
-Consider the summation $ T(n) = 1 + \dfrac{1}{2} + \dfrac{1}{4}+ \dfrac{1}{8} + \cdots + \dfrac{1}{2^n} $ for some natural number $ n $. 
-
-Remark that $ T(0) = \dfrac{1}{2^0} = \dfrac{1}{1} = 1 $.
-
-This summation can be arbitrarily close to $2$. 
-
-Find the minimum value of $ n $ such that $ T(n) $ is close to $2$ by $ 0.01 $, i.e., $ 2 - T(n) &lt; 0.01 $.
-
-In other words, we find the minimum value of $n$ such that $ T(n) &gt; 1.99 $.
-
-The operator for &quot;less than or equal to&quot; in python is &quot;$ &lt; = $&quot;.
-</pre></div>
-</div>
-</div>
-</div>
+<p>Consider the summation</p>
+<div class="math notranslate nohighlight">
+\[T(n) = 1 + \dfrac{1}{2} + \dfrac{1}{4}+ \dfrac{1}{8} + \cdots + \dfrac{1}{2^n}\]</div>
+<p>for some natural number <span class="math notranslate nohighlight">\( n \)</span>.</p>
+<p>Remark that <span class="math notranslate nohighlight">\( T(0) = \dfrac{1}{2^0} = \dfrac{1}{1} = 1 \)</span>.</p>
+<p>This summation can be arbitrarily close to <span class="math notranslate nohighlight">\(2\)</span>.</p>
+<p>Find the minimum value of <span class="math notranslate nohighlight">\( n \)</span> such that <span class="math notranslate nohighlight">\( T(n) \)</span> is close to <span class="math notranslate nohighlight">\(2\)</span> by <span class="math notranslate nohighlight">\( 0.01 \)</span>, i.e., <span class="math notranslate nohighlight">\( 2 - T(n) &lt; 0.01 \)</span>.</p>
+<p>In other words, we find the minimum value of <span class="math notranslate nohighlight">\(n\)</span> such that <span class="math notranslate nohighlight">\( T(n) &gt; 1.99 \)</span>.</p>
+<p>The operator for “less than or equal to” in python is “<span class="math notranslate nohighlight">\( &lt; = \)</span>“.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Insert</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span>

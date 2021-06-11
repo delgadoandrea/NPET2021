@@ -42,11 +42,11 @@ Insert your code here
 ```
 
 ## Task 3
-```{code-cell} ipython3
-<a id="task3"></a>
-<h3> Task 3 </h3>
+Consider the summation 
 
-Consider the summation $ T(n) = 1 + \dfrac{1}{2} + \dfrac{1}{4}+ \dfrac{1}{8} + \cdots + \dfrac{1}{2^n} $ for some natural number $ n $. 
+$$T(n) = 1 + \dfrac{1}{2} + \dfrac{1}{4}+ \dfrac{1}{8} + \cdots + \dfrac{1}{2^n}$$
+
+for some natural number $ n $. 
 
 Remark that $ T(0) = \dfrac{1}{2^0} = \dfrac{1}{1} = 1 $.
 
@@ -58,7 +58,7 @@ In other words, we find the minimum value of $n$ such that $ T(n) > 1.99 $.
 
 The operator for "less than or equal to" in python is "$ < = $".
 
-```
+
 
 ```{code-cell} ipython3
 Insert your code here
